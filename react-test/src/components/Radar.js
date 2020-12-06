@@ -1,16 +1,40 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import modules from "../modules"
 import { v4 as uuidv4 } from 'uuid';
-const Radar = ({ modules, i, isLoading, hasError, numbers, setNumbers }) => {
+import { appContext } from "./Context"; 
+import getChartUrl from "../util/getChartUrl"
+
+
+const Radar = () => {
+    const { arrayOfNumbers, setArrayOFNumbers } = useContext(appContext)
     
-    return (
-        <div className='main-container'>
+    const listModules = arrayOfNumbers.map((item, index) =>
+        <div className="form-container" key={uuidv4()}>
             <div>
-            {modules.map((module) => (
-                <div key=uuidv4()>
-                <span>{modules[0]}</span>
-                <input name="HTML_CSS" type="number" min="0" max="10" value={numbers.HTML_CSS} onChange={(e) => setNumbers(numbers.HTML_CSS)}></input>
-                </div>
-            ))};
+                <span>{modules[index]}</span>
+            </div>
+            <div>
+                <input 
+                type="number" 
+                min="0" 
+                max="10" 
+                value={item} 
+                onChange={(e) => {
+                    console.log(arrayOfNumbers)
+                    let updatedArrayOfNumbers = [...arrayOfNumbers];
+                    updatedArrayOfNumbers[index] = parseInt(e.target.value);
+                    setArrayOFNumbers(updatedArrayOfNumbers);
+                }}></input>
+            </div>
+        </div>
+    ); 
+    
+    return (    
+        <div className='main-container'>
+            <div className='module-container'>
+                {listModules}
+            </div>
+            <div className='image-container'>
             </div>
         </div>
     )

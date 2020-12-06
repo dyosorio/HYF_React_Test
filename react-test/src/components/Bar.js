@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Bar = ({ modules, isLoading, hasError }) => {
+const Bar = () => {
     return (
         <div className='main-container'>
             <div className='module-container'>

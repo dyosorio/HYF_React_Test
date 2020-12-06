@@ -34,21 +34,26 @@ ul li{
 
 .module-container{
   display: flex;
-  flex-direction: column;
-  width: 30%;
+  width: 40%;
   border: 1px solid green;
 }
 
-.module-container div{
+.form-container{
+  border: 1px solid cyan;
+  height: 2.5em;
   display: flex;
 }
 
-span, input{
+.form-container div{
   width: 50%;
 }
 
 .image-container{
-  width: 70%;
+  width: 60%;
   height: 50vh;
-  border: 1px solid red;
+  border: 1px solid ;
+}
+
+input{
+  height: 2.5em;
 }

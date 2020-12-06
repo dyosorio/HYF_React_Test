@@ -1,20 +1,19 @@
 import "./App.css";
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-import Radar from "./components/Radar";
-import Bar from "./components/Bar";
-import modules from "./modules";
+import { appContext } from "./components/Context"; 
+import Radar from "./components/Radar"
+import Bar from "./components/Bar"
+
 
 function App() {
-  const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-  const [isLoading, setLoading] = useState(false); 
-  const [hasError, setError] = useState(false);
-
+  const exampleData = [0, 1, 2, 3, 4, 5, 6];
+  const [arrayOfNumbers, setArrayOFNumbers] = useState(exampleData);
   return (
     <div>
       <Router>
@@ -34,22 +33,14 @@ function App() {
           </ul>
         </nav>
         <Switch>
-          <Route path="/radar">
-            <Radar 
-            modules={modules}
-            isLoading={isLoading}
-            hasError={hasError}
-            numbers={numbers}
-            setNumbers={setNumbers}
-            />
-          </Route>
-          <Route path="/bar">
-            <Bar 
-            modules={modules}
-            isLoading={isLoading}
-            hasError={hasError}
-            />
-          </Route>
+          <appContext.Provider value={{ arrayOfNumbers, setArrayOFNumbers }}>
+            <Route path="/radar">
+              <Radar />
+            </Route>
+            <Route path="/bar">
+              <Bar />
+            </Route>
+          </appContext.Provider>
         </Switch>
       </div>
     </Router>
