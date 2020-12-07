@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { appContext } from "./Context"; 
 import ModulesInput from './modulesInput';
-import getChartUrl from "../util/getChartUrl"
-
-
+import { getRadarChartUrl } from "../util/getChartUrl"
 
 const Radar = () => {
+    const { arrayOfNumbers } = useContext(appContext)
+    const url = getRadarChartUrl(arrayOfNumbers)
+    console.log(url)
     
     return (    
         <div className='main-container'>
@@ -12,6 +14,7 @@ const Radar = () => {
                 <ModulesInput />
             </div>
             <div className='image-container'>
+                <img src={url} alt="Radar_Chart" />
             </div>
         </div>
     )

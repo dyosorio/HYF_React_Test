@@ -29,17 +29,24 @@ ul li{
 .main-container{
   display: flex;
   width: 100%;
-  border: 1px solid blue;
 }
 
 .module-container{
   display: flex;
-  width: 40%;
-  border: 1px solid green;
+  width: 50%;
+}
+.image-container{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 50vh;
+}
+
+img{
+  width: 100%;
 }
 
 .form-container{
-  border: 1px solid cyan;
   height: 2.5em;
   display: flex;
 }
@@ -48,12 +55,7 @@ ul li{
   width: 50%;
 }
 
-.image-container{
-  width: 60%;
-  height: 50vh;
-  border: 1px solid ;
-}
-
 input{
   height: 2.5em;
 }
+
