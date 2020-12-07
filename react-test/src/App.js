@@ -12,8 +12,10 @@ import Bar from "./components/Bar"
 
 
 function App() {
-  const exampleData = [0, 1, 2, 3, 4, 5, 6];
+  const exampleData = [1, 1, 1, 1, 1, 1, 1];
+
   const [arrayOfNumbers, setArrayOFNumbers] = useState(exampleData);
+  
   return (
     <div>
       <Router>
@@ -44,9 +46,6 @@ function App() {
         </Switch>
       </div>
     </Router>
-    <div className="app-container">
-        Good luck students!
-    </div>
     </div>
   );
 }
