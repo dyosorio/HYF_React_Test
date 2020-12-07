@@ -7,8 +7,8 @@ import {
   Link
 } from "react-router-dom";
 import { appContext } from "./components/Context"; 
-import Radar from "./components/Radar"
-import Bar from "./components/Bar"
+import Radar from "./pages/Radar"
+import Bar from "./pages/Bar"
 
 
 function App() {

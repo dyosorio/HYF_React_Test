@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { appContext } from "./Context"; 
-import ModulesInput from './modulesInput';
+import { appContext } from "../components/Context"; 
+import ModulesInput from '../components/modulesInput';
 import { getRadarChartUrl } from "../util/getChartUrl"
 
 const Radar = () => {

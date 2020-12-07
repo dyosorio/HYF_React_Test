@@ -18,13 +18,13 @@ Below is a checklist of functionality in slightly smaller steps for you (this is
 
 - [✅] Create a Nav bar with 2 buttons (radar and bar) that go to 2 different pages and update the url
   - TIP: `react-router-dom` is already added to the `package.json` file. Use that package. The documentation can be found here: https://reactrouter.com/web/guides/quick-start.
-- [ ✅] Create 7 inputs that can be filled in by the user and are initially filled in with a random number between 1 and 10
+- [✅] Create 7 inputs that can be filled in by the user and are initially filled in with a random number between 1 and 10
   - TIP: think about where the state of these inputs should be kept, you will need to know all of the numbers later for the chart
   - TIP: Use the `useContext` hook for your state
-- [ ] Create a Radar page, you can use the `getRadarChartUrl` to get the url to the graph
+- [✅] Create a Radar page, you can use the `getRadarChartUrl` to get the url to the graph
   - TIP: the API returns a url, this is a link to the image of this graph
-- [ ] Create a Bar page, you can use the `getBarChartUrl` to get the url to the graph
-- [ ] The app initially shows the radar graph of the 7 inputs and the charts update when an input is changed
+- [✅] Create a Bar page, you can use the `getBarChartUrl` to get the url to the graph
+- [✅] The app initially shows the radar graph of the 7 inputs and the charts update when an input is changed
 
 # Step by step help
 
